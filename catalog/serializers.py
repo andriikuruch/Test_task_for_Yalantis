@@ -18,3 +18,5 @@ class CourseSerializer(serializers.ModelSerializer):
 
         if errors:
             raise serializers.ValidationError(*errors)
+
+        return data
