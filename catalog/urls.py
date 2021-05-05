@@ -4,7 +4,7 @@ from .views import CourseListView, CourseCreateView, CourseRetrieveUpdateDestroy
 app_name = 'catalog'
 
 urlpatterns = [
-    path('', CourseListView.as_view()),
-    path('create/', CourseCreateView.as_view()),
-    path('course/<int:pk>', CourseRetrieveUpdateDestroyView.as_view()),
+    path('', CourseListView.as_view(), name="courses"),
+    path('create/', CourseCreateView.as_view(), name="create-course"),
+    path('course/<int:pk>', CourseRetrieveUpdateDestroyView.as_view(), name="course"),
 ]
